@@ -20,16 +20,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Autenticacao\" />
-    <Folder Include="Application\Conversoes\" />
-    <Folder Include="Application\Regras\" />
-    <Folder Include="Application\Services\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="DTOs\AutenticacaoDto\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
