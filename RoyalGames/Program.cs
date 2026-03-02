@@ -1,3 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using RoyalGames.Application.Services;
+using RoyalGames.Contexts;
+using RoyalGames.Controllers;
+using RoyalGames.Interfaces;
+using RoyalGames.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +13,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<RoyalGamesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString(default)));
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<UsuarioService>();
+
+//builder.Services.AddScoped<IJogoRepository, IJogoRepository>();
+//builder.Services.AddScoped<JogoService>();
 
 var app = builder.Build();
 

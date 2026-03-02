@@ -1,4 +1,5 @@
-﻿using RoyalGames.Contexts;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using RoyalGames.Contexts;
 using RoyalGames.Domains;
 using RoyalGames.Interfaces;
 
@@ -40,14 +41,23 @@ namespace RoyalGames.Repositories
         }
         public void Remover(int id)
         {
-            _context.Remove(id);
+            Usuario? usuario = _context.Usuario.FirstOrDefault(user => user.UsuarioID == id);
+
+            if (usuario == null) return;
+
+            _context.Usuario.Remove(usuario);
             _context.SaveChanges();
         }
 
-        public bool? validarAdmin(int id)
+        public bool? ValidarAdmin(int id)
         {
             Usuario? usuario = _context.Usuario.FirstOrDefault(user => user.UsuarioID == id);
             return usuario?.AdminUsuario;
+        }
+
+        public bool EmailExiste(string email)
+        {
+            return _context.Usuario.Any(u => u.Email == email);
         }
     }
 }
