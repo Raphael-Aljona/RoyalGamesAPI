@@ -1,8 +1,6 @@
-﻿using RoyalGames.Domains;
-
-namespace RoyalGames.DTOs.JogoDto
+﻿namespace RoyalGames.DTOs.JogoDto
 {
-    public class CriarJogoDto
+    public class AtualizarJogoDto
     {
         public string Nome { get; set; } = null!;
         public decimal Preco { get; set; }
@@ -10,9 +8,10 @@ namespace RoyalGames.DTOs.JogoDto
 
         public IFormFile Imagem { get; set; } = null!;
 
-        public List<int> UsuarioIds { get; set; } = new();
-
         public List<int> ClassificacaoIndicativaIds { get; set; } = new();
-        public bool AdminUsuario {  get; set; }
+
+        public bool? StatusJogo { get; set; }
+
+        public bool? AdminUsuario {  get; set; }
     }
 }
