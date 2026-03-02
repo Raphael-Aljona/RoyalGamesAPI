@@ -13,7 +13,7 @@ namespace RoyalGames.Repositories
             _context = context;
         }
         public List<Usuario> GetUsuarios()
-        {            
+        {
             return _context.Usuario.ToList();
         }
         public Usuario? GetUsuarioById(int id)
@@ -32,7 +32,7 @@ namespace RoyalGames.Repositories
             Usuario? usuarioBanco = _context.Usuario.FirstOrDefault(u => u.UsuarioID == usuario.UsuarioID);
 
             if (usuarioBanco == null) return;
-       
+
             usuarioBanco.Email = usuario.Email;
             usuarioBanco.Nome = usuario.Nome;
 
@@ -42,6 +42,12 @@ namespace RoyalGames.Repositories
         {
             _context.Remove(id);
             _context.SaveChanges();
+        }
+
+        public bool? validarAdmin(int id)
+        {
+            Usuario? usuario = _context.Usuario.FirstOrDefault(user => user.UsuarioID == id);
+            return usuario?.AdminUsuario;
         }
     }
 }

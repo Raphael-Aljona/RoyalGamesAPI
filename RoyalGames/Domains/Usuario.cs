@@ -15,5 +15,7 @@ public partial class Usuario
 
     public bool? AdminUsuario { get; set; }
 
+    public byte[]? Senha { get; set; }
+
     public virtual ICollection<Jogo> Jogo { get; set; } = new List<Jogo>();
 }
