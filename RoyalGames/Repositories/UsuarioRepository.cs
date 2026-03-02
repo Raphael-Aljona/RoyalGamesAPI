@@ -36,6 +36,7 @@ namespace RoyalGames.Repositories
 
             usuarioBanco.Email = usuario.Email;
             usuarioBanco.Nome = usuario.Nome;
+            usuarioBanco.Senha = usuario.Senha;
 
             _context.SaveChanges();
         }

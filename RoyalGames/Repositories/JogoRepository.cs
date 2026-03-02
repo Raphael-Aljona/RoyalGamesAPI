@@ -1,6 +1,6 @@
 ﻿namespace RoyalGames.Repositories
 {
-    public class JogoRepository
+    public class JogoRepository 
     {
     }
 }

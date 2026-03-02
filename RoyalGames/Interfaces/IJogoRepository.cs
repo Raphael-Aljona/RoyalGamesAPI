@@ -1,4 +1,5 @@
-﻿using RoyalGames.Domains;
+﻿using Microsoft.AspNetCore.Components.Web;
+using RoyalGames.Domains;
 
 namespace RoyalGames.Interfaces
 {

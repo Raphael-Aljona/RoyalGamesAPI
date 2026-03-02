@@ -117,6 +117,8 @@ namespace RoyalGames.Application.Services
             usuarioBanco.Senha = HashSenha(usuarioDto.Senha);
             usuarioBanco.Email = usuarioDto.Email;
 
+            _repository.Atualizar(usuarioBanco);
+
             return LerDto(usuarioBanco);
         }
     }
