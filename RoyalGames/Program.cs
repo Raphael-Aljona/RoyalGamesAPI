@@ -50,6 +50,9 @@ builder.Services.AddDbContext<RoyalGamesContext>(options => options.UseSqlServer
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<UsuarioService>();
 
+builder.Services.AddScoped<IPlataformaRepository, PlataformaRepository>();
+builder.Services.AddScoped<PlataformaService>();
+
 builder.Services.AddScoped<GeradorTokenJwt>();
 builder.Services.AddScoped<AutenticacaoService>();
 
