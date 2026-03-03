@@ -293,3 +293,4 @@ C:\Users\53789144851\Desktop\projects\RoyalGamesAPI\RoyalGamesAPI\RoyalGames\obj
 C:\Users\53789144851\Desktop\projects\RoyalGamesAPI\RoyalGamesAPI\RoyalGames\obj\Debug\net8.0\RoyalGames.csproj.Up2Date
 C:\Users\53789144851\Desktop\projects\RoyalGamesAPI\RoyalGamesAPI\RoyalGames\obj\Debug\net8.0\RoyalGames.genruntimeconfig.cache
 C:\Users\53789144851\Desktop\projects\RoyalGamesAPI\RoyalGamesAPI\RoyalGames\obj\Debug\net8.0\ref\RoyalGames.dll
+C:\Users\53789144851\Desktop\projects\RoyalGamesAPI\RoyalGamesAPI\RoyalGames\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

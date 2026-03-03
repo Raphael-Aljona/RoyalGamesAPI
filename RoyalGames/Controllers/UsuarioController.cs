@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using RoyalGames.Application.Services;
@@ -50,6 +51,7 @@ namespace RoyalGames.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public ActionResult<LerUsuarioDto> Atualizar(int id, CriarUsuarioDto criar)
         {
             try
@@ -63,6 +65,7 @@ namespace RoyalGames.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public ActionResult Remover(int id)
         {
             try
