@@ -107,7 +107,7 @@ namespace RoyalGames.Application.Services
 
             if (usuarioBanco == null) throw new DomainException("Usuário não encontrado");
 
-            _repository.EmailExiste(usuarioBanco.Email);
+            ValidarEmail(usuarioDto.Email);
 
             Usuario? usuarioComMesmoEmail = _repository.GetUsuarios().FirstOrDefault(user => user.Email == usuarioDto.Email);
 
@@ -118,6 +118,8 @@ namespace RoyalGames.Application.Services
             usuarioBanco.Email = usuarioDto.Email;
 
             _repository.Atualizar(usuarioBanco);
+
+            Console.WriteLine("Service");
 
             return LerDto(usuarioBanco);
         }

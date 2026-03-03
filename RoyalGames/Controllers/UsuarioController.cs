@@ -55,7 +55,7 @@ namespace RoyalGames.Controllers
             try
             {
                 LerUsuarioDto usuarioDto = _service.Atualizar(criar, id);
-                return StatusCode(204, usuarioDto);
+                return StatusCode(200, usuarioDto);
             } catch (DomainException ex)
             {
                 return BadRequest(ex.Message);  
