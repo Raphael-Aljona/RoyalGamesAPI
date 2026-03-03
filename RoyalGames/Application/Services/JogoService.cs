@@ -7,16 +7,15 @@ namespace RoyalGames.Application.Services
     public class JogoService
     {
 
-        public class JogoService
+
+        private readonly IJogoRepository _repository;
+
+        public JogoService(IJogoRepository repository)
         {
-            private readonly IJogoRepository _repository;
-
-            public JogoService(IJogoRepository repository)
-            {
-                _repository = repository;
-            }
-
-            }
+            _repository = repository;
         }
+
+
+
     }
 }

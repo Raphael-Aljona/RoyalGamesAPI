@@ -6,7 +6,8 @@ namespace RoyalGames.Interfaces
     {
         List<Usuario> GetUsuarios();
         Usuario? GetUsuarioById(int id);
-        bool? validarAdmin();
+        bool? ValidarAdmin(int id);
+        bool EmailExiste(string email);
         void Adicionar(Usuario usuario);
         void Remover(int id);
         void Atualizar(Usuario usuario);

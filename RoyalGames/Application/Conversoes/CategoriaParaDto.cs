@@ -10,11 +10,18 @@ namespace RoyalGames.Application.Conversoes
             return new LerJogoDto
             {
                 JogoID = jogo.JogoID,
+<<<<<<< HEAD
                 Nome= jogo.Nome,
                 Preco= jogo.Preco,
                 Descricao= jogo.Descricao,
                 StatusProduto=jogo.StatusJogo,
                 CategoriaID = categoria.Categoria.Select(c => c.CategoriaID).ToList(),
+=======
+                Nome = jogo.Nome,
+                Preco = jogo.Preco,
+                Descricao = jogo.Descricao,
+                StatusProduto = jogo.StatusJogo,
+>>>>>>> a879481e181cc5ff596af711d9a1d3a07d0b0171
 
                 Categoria = jogo.Categoria.Select(c => c.Nome).ToList(),
 
@@ -22,7 +29,7 @@ namespace RoyalGames.Application.Conversoes
                 UsuarioNome = jogo.Usuario.Nome,
                 UsuarioEmail = jogo.Usuario.Email
 
-            }
+            };
         }
     }
 }
