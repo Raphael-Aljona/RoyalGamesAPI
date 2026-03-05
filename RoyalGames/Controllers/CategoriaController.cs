@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RoyalGames.Application.Services;
 using RoyalGames.DTOs.CategoriaDto;
-using RoyalGames.Exceptions;
 using RoyalGames.Repositories;
+using VHBurguer.Exceptions;
 
 namespace RoyalGames.Controllers
 {
@@ -50,10 +50,10 @@ namespace RoyalGames.Controllers
                 _service.Adicionar(criarDto);
                 return StatusCode(201);
             }
-            catch (Exception)
+            catch (DomainException ex)
             {
 
-                return BadRequest(Exception.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -67,10 +67,10 @@ namespace RoyalGames.Controllers
                 _service.Atualizar(id, criarDto);
                 return NoContent();
             }
-            catch (DomainException)
+            catch (DomainException ex)
             {
 
-                return BadRequest(DomainException.Message);
+                return BadRequest(ex.Message);
             }
         }
 
@@ -85,9 +85,9 @@ namespace RoyalGames.Controllers
                 _service.Remover(id);
                 return NoContent();
             }
-            catch (DomainException)
+            catch (DomainException ex)
             {
-                return BadRequest(DomainException.Message);
+                return BadRequest(ex.Message);
             }
         }
     }

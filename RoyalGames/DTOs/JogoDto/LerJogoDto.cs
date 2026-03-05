@@ -13,8 +13,11 @@
         public bool? StatusProduto { get; set; }
 
         // categorias 
-        public List<int> ClassificacaoIndicativaIds { get; set; } = new();
-        public List<string> ClassificacaoIndicativa { get; set; } = new();
+        public int? ClassificacaoIndicativa { get; set; } = new();
+        public List<int> CategoriaIds { get; set; } = new();
+        public List<string> Categoria { get; set; } = new();
+        public List<int> PlataformaIds { get; set; } = new();
+        public List<string> Plataforma { get; set; } = new();
 
         //usuario que cadastrou
         public int? UsuarioID { get; set; }

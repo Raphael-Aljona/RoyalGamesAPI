@@ -12,6 +12,8 @@ namespace RoyalGames.DTOs.JogoDto
 
         public List<int> UsuarioIds { get; set; } = new();
 
+        public List<int> CategoriaIds { get; set; } = new();
+        public List<int> PlataformaIds { get; set; } = new();
         public List<int> ClassificacaoIndicativaIds { get; set; } = new();
         public bool AdminUsuario {  get; set; }
     }

@@ -92,5 +92,7 @@ namespace RoyalGames.Application.Services
 
             _repository.DeletarPlataforma(id);
         }
+
+
     }
 }
