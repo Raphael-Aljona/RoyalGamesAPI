@@ -15,9 +15,9 @@
         // categorias 
         public int? ClassificacaoIndicativa { get; set; } = new();
         public List<int> CategoriaIds { get; set; } = new();
-        public List<string> Categoria { get; set; } = new();
+        public List<string> Categorias { get; set; } = new();
         public List<int> PlataformaIds { get; set; } = new();
-        public List<string> Plataforma { get; set; } = new();
+        public List<string> Plataformas { get; set; } = new();
 
         //usuario que cadastrou
         public int? UsuarioID { get; set; }

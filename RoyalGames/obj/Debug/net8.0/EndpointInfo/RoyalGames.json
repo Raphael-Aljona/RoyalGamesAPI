@@ -418,6 +418,20 @@
                       "format": "int32"
                     }
                   },
+                  "Categoria": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "Plataforma": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
                   "StatusJogo": {
                     "type": "boolean"
                   },
@@ -440,6 +454,12 @@
                   "style": "form"
                 },
                 "ClassificacaoIndicativaIds": {
+                  "style": "form"
+                },
+                "Categoria": {
+                  "style": "form"
+                },
+                "Plataforma": {
                   "style": "form"
                 },
                 "StatusJogo": {
@@ -933,7 +953,7 @@
             },
             "nullable": true
           },
-          "categoria": {
+          "categorias": {
             "type": "array",
             "items": {
               "type": "string"
@@ -948,7 +968,7 @@
             },
             "nullable": true
           },
-          "plataforma": {
+          "plataformas": {
             "type": "array",
             "items": {
               "type": "string"

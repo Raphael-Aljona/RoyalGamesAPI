@@ -107,9 +107,7 @@ namespace RoyalGames.Application.Services
                 UsuarioID = usuarioId,
             };
 
-            _repository.Adicionar(jogo, jogoDto.CategoriaIds);
-            _repository.Adicionar(jogo, jogoDto.PlataformaIds);
-            _repository.Adicionar(jogo, jogoDto.ClassificacaoIndicativaIds);
+            _repository.Adicionar(jogo, jogoDto.CategoriaIds, jogoDto.PlataformaIds);
             return JogoParaDto.ConverterparaDto(jogo);
 
         }
@@ -147,7 +145,7 @@ namespace RoyalGames.Application.Services
                 jogoBanco.StatusJogo = jogoDto.StatusJogo.Value;
             }
 
-            _repository.Atualizar(jogoBanco, jogoDto.ClassificacaoIndicativaIds);
+            _repository.Atualizar(jogoBanco, jogoDto.Categoria, jogoDto.Plataforma);
             return JogoParaDto.ConverterparaDto(jogoBanco);
         }
          public void Remover(int id)

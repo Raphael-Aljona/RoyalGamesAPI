@@ -10,6 +10,10 @@
 
         public List<int> ClassificacaoIndicativaIds { get; set; } = new();
 
+        public List<int> Categoria {  get; set; } = new();
+
+        public List<int> Plataforma { get; set; } = new();
+
         public bool? StatusJogo { get; set; }
 
         public bool? AdminUsuario {  get; set; }

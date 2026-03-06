@@ -51,7 +51,7 @@ namespace RoyalGames.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize]
+        //[Authorize]
         public ActionResult<LerUsuarioDto> Atualizar(int id, CriarUsuarioDto criar)
         {
             try

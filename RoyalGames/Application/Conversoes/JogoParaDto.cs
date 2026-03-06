@@ -17,11 +17,11 @@ namespace RoyalGames.Application.Conversoes
 
                 CategoriaIds = jogo.Categoria.Select(c=>c.CategoriaID).ToList(),
 
-                Categoria= jogo.Categoria.Select(c=>c.Nome).ToList(),
+                Categorias= jogo.Categoria.Select(c=>c.Nome).ToList(),
 
                 PlataformaIds = jogo.Plataforma.Select(p=>p.PlataformaID).ToList(),
 
-                Plataforma =jogo.Plataforma.Select(p=>p.Nome).ToList(),
+                Plataformas =jogo.Plataforma.Select(p=>p.Nome).ToList(),
 
                 ClassificacaoIndicativa = jogo.ClassificacaoIndicativaID,
 

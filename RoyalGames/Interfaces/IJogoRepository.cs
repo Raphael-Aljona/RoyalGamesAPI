@@ -11,8 +11,8 @@ namespace RoyalGames.Interfaces
 
         byte[] ObterImagem(int id);
         bool NomeExiste(string nome, int? JogoIdAtual = null);
-        void Adicionar(Jogo jogo, List<int> UsuarioIds);
-        void Atualizar(Jogo jogo, List<int> UsuarioIds);
+        void Adicionar(Jogo jogo, List<int> categoriaIds, List<int> plataformaIds);
+        void Atualizar(Jogo jogo, List<int> categoriaIds, List<int> plataformaIds);
         void Remover(int id);
 
     }
