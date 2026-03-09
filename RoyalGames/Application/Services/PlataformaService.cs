@@ -67,7 +67,7 @@ namespace RoyalGames.Application.Services
             return LerDto(plataforma);
         }
 
-        public LerPlataformaDto Atualizar(LerPlataformaDto lerDto, int id)
+        public LerPlataformaDto Atualizar(CriarPlataformaDto lerDto, int id)
         {
             Plataforma plataforma = _repository.GetPlataformaById(id);
 

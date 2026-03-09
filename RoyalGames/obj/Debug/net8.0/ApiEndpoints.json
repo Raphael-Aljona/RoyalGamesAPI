@@ -55,7 +55,7 @@
     "ContainingType": "RoyalGames.Controllers.CategoriaController",
     "Method": "ObterPorId",
     "RelativePath": "api/Categoria/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -279,6 +279,22 @@
   },
   {
     "ContainingType": "RoyalGames.Controllers.JogoController",
+    "Method": "Remover",
+    "RelativePath": "api/Jogo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoyalGames.Controllers.JogoController",
     "Method": "ObterImagem",
     "RelativePath": "api/Jogo/{id}/imagem",
     "HttpMethod": "GET",
@@ -365,7 +381,7 @@
     "Parameters": [
       {
         "Name": "lerDto",
-        "Type": "RoyalGames.DTOs.PlataformaDto.LerPlataformaDto",
+        "Type": "RoyalGames.DTOs.PlataformaDto.CriarPlataformaDto",
         "IsRequired": true
       },
       {

@@ -57,7 +57,7 @@ namespace RoyalGames.Controllers
         [HttpPut("{id}")]
         [Authorize]
 
-        public ActionResult Atualizar(LerPlataformaDto lerDto, int id)
+        public ActionResult Atualizar(CriarPlataformaDto lerDto, int id)
         {
             try
             {

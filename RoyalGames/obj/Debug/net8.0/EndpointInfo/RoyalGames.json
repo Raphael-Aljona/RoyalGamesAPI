@@ -104,7 +104,7 @@
       }
     },
     "/api/Categoria/{id}": {
-      "post": {
+      "get": {
         "tags": [
           "Categoria"
         ],
@@ -477,6 +477,27 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "Jogo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Jogo/{id}/imagem": {
@@ -627,17 +648,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             }
           }

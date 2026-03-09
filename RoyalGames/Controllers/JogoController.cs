@@ -93,13 +93,27 @@ namespace RoyalGames.Controllers
         {
             try
             {
-                _service.Remover(id);
+                _service.Atualizar(id, jogoDto);
                 return NoContent();
             }
             catch (DomainException ex)
             {
                 return BadRequest(ex.Message);
                 throw;
+            }
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize]
+        public ActionResult Remover(int id)
+        {
+            try
+            {
+                _service.Remover(id);
+                return NoContent();
+            }catch (DomainException ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }

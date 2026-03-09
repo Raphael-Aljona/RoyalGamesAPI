@@ -27,7 +27,7 @@ namespace RoyalGames.Controllers
             return Ok(c);
         }
 
-        [HttpPost("{id}")]
+        [HttpGet("{id}")]
 
         public ActionResult<LerCategoriaDto> ObterPorId(int id)
         {
