@@ -31,7 +31,7 @@ namespace RoyalGames.Application.Services
 
             if (usuarioBanco == null) throw new DomainException("Email inválido ou senha inválido");
 
-            if (VerificarSenha(usuario.Senha, usuarioBanco.Senha) == false) throw new DomainException("Email inválido ou senha inválido");
+            if (VerificarSenha(usuario.Senha, usuarioBanco.Senha) == false) throw new DomainException("Senha inválido");
 
             if (usuarioBanco.StatusUsuario == false) throw new DomainException("Conta desativada");
 

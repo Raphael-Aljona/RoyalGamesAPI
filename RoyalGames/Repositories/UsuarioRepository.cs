@@ -38,8 +38,6 @@ namespace RoyalGames.Repositories
             usuarioBanco.Nome = usuario.Nome;
             usuarioBanco.Senha = usuario.Senha;
 
-            Console.WriteLine("Repository");
-
 
             _context.SaveChanges();
         }

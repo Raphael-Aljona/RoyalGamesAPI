@@ -28,6 +28,7 @@ namespace RoyalGames.Application.Services
             LerPlataformaDto lerPlataformaDto = new LerPlataformaDto
             {
                 Nome = plataforma.Nome,
+                PlataformaID = plataforma.PlataformaID,  
             };
 
             return lerPlataformaDto;
@@ -51,7 +52,7 @@ namespace RoyalGames.Application.Services
             return lerPlatDto;
         }
 
-        public LerPlataformaDto Adicionar(LerPlataformaDto lerDto)
+        public LerPlataformaDto Adicionar(CriarPlataformaDto lerDto)
         {
             ValidarNome(lerDto.Nome);
 

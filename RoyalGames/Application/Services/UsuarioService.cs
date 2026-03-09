@@ -119,8 +119,6 @@ namespace RoyalGames.Application.Services
 
             _repository.Atualizar(usuarioBanco);
 
-            Console.WriteLine("Service");
-
             return LerDto(usuarioBanco);
         }
     }

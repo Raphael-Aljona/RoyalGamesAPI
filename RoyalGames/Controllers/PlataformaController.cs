@@ -26,7 +26,7 @@ namespace RoyalGames.Controllers
             return Ok(p);
         }
 
-        [HttpPost("{id}")]
+        [HttpGet("{id}")]
         public ActionResult<LerPlataformaDto> ObterPorId(int id)
         {
             LerPlataformaDto p = _service.GetPlataformaById(id);
@@ -40,7 +40,7 @@ namespace RoyalGames.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Adicionar(LerPlataformaDto criardto)
+        public ActionResult Adicionar(CriarPlataformaDto criardto)
         {
             try
             {

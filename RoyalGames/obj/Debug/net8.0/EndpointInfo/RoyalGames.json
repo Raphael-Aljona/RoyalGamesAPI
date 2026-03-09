@@ -547,17 +547,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LerPlataformaDto"
+                "$ref": "#/components/schemas/CriarPlataformaDto"
               }
             }
           }
@@ -570,7 +570,7 @@
       }
     },
     "/api/Plataforma/{id}": {
-      "post": {
+      "get": {
         "tags": [
           "Plataforma"
         ],
@@ -876,6 +876,16 @@
   "components": {
     "schemas": {
       "CriarCategoriaDto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarPlataformaDto": {
         "type": "object",
         "properties": {
           "nome": {

@@ -323,7 +323,7 @@
     "Parameters": [
       {
         "Name": "criardto",
-        "Type": "RoyalGames.DTOs.PlataformaDto.LerPlataformaDto",
+        "Type": "RoyalGames.DTOs.PlataformaDto.CriarPlataformaDto",
         "IsRequired": true
       }
     ],
@@ -333,7 +333,7 @@
     "ContainingType": "RoyalGames.Controllers.PlataformaController",
     "Method": "ObterPorId",
     "RelativePath": "api/Plataforma/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
