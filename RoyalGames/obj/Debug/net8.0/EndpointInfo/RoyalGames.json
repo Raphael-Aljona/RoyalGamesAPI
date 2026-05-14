@@ -972,8 +972,7 @@
             "nullable": true
           },
           "classificacaoIndicativa": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "nullable": true
           },
           "categoriaIds": {
