@@ -287,11 +287,8 @@
                     }
                   },
                   "ClassificacaoIndicativaIds": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer",
-                      "format": "int32"
-                    }
+                    "type": "integer",
+                    "format": "int32"
                   },
                   "AdminUsuario": {
                     "type": "boolean"
@@ -974,6 +971,10 @@
           "classificacaoIndicativa": {
             "type": "string",
             "nullable": true
+          },
+          "classificacaoIndicativaID": {
+            "type": "integer",
+            "format": "int32"
           },
           "categoriaIds": {
             "type": "array",

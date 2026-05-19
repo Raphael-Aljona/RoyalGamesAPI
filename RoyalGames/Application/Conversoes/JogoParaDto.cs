@@ -23,7 +23,8 @@ namespace RoyalGames.Application.Conversoes
 
                 Plataformas = jogo.Plataforma.Select(p => p.Nome).ToList(),
 
-                ClassificacaoIndicativa = jogo.ClassificacaoIndicativa?.Classificacao ?? "Livre",
+                ClassificacaoIndicativa = jogo.ClassificacaoIndicativa!.Classificacao,
+                ClassificacaoIndicativaID = jogo.ClassificacaoIndicativa!.ClassificacaoIndicativaID,
 
                 UsuarioID = jogo.UsuarioID,
                 UsuarioNome = jogo.Usuario?.Nome,

@@ -14,6 +14,7 @@
 
         // categorias 
         public string ClassificacaoIndicativa { get; set; } = null!;
+        public int ClassificacaoIndicativaID { get; set; }
         public List<int> CategoriaIds { get; set; } = new();
         public List<string> Categorias { get; set; } = new();
         public List<int> PlataformaIds { get; set; } = new();

@@ -105,6 +105,7 @@ namespace RoyalGames.Application.Services
                 Imagem = ImagemParaBytes.ConverterImagem(jogoDto.Imagem),
                 StatusJogo = true,
                 UsuarioID = usuarioId,
+                ClassificacaoIndicativaID = jogoDto.ClassificacaoIndicativaIds
             };
 
             _repository.Adicionar(jogo, jogoDto.CategoriaIds, jogoDto.PlataformaIds);
