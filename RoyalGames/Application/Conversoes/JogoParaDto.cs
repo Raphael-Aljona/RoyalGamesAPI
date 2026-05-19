@@ -23,12 +23,13 @@ namespace RoyalGames.Application.Conversoes
 
                 Plataformas = jogo.Plataforma.Select(p => p.Nome).ToList(),
 
-                ClassificacaoIndicativa = jogo.ClassificacaoIndicativa!.Classificacao,
-                ClassificacaoIndicativaID = jogo.ClassificacaoIndicativa!.ClassificacaoIndicativaID,
+                ClassificacaoIndicativa = jogo.ClassificacaoIndicativa?.Classificacao ?? "Livre",
+                ClassificacaoIndicativaID = jogo.ClassificacaoIndicativa?.ClassificacaoIndicativaID ?? 0,
 
                 UsuarioID = jogo.UsuarioID,
                 UsuarioNome = jogo.Usuario?.Nome,
-                UsuarioEmail = jogo.Usuario?.Email
+                UsuarioEmail = jogo.Usuario?.Email,
+                ImagemUrl = $"Jogo/{jogo.JogoID}/imagem"
 
             };
         }
